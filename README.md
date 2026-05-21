@@ -1,37 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📱 Social Media — Frontend
 
-## Getting Started
+Frontend de uma rede social construído com **Next.js 16**, **TypeScript** e **Tailwind CSS**, consumindo uma API REST externa.
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias
+
+- [Next.js 16](https://nextjs.org/) — Framework React com App Router
+- [React 19](https://react.dev/) — Biblioteca de UI
+- [TypeScript 5](https://www.typescriptlang.org/) — Tipagem estática
+- [Tailwind CSS 4](https://tailwindcss.com/) — Estilização utilitária
+- [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/) — Componentes acessíveis
+- [Axios](https://axios-http.com/) — Cliente HTTP
+- [date-fns](https://date-fns.org/) — Manipulação de datas
+- [js-cookie](https://github.com/js-cookie/js-cookie) — Gerenciamento de cookies
+- [Lucide React](https://lucide.dev/) — Ícones
+
+---
+
+## 📋 Pré-requisitos
+
+- **Node.js** >= 18
+- **pnpm** (recomendado) ou npm/yarn
+
+---
+
+## ⚙️ Instalação e configuração
+
+### 1. Clone o repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/JoaoFabris/front-nextjs-api-social-meida.git
+cd front-nextjs-api-social-meida
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instale as dependências
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+# ou
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure as variáveis de ambiente
 
-## Learn More
+Copie o arquivo de exemplo e preencha com seus valores:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cp .env.example .env.local
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edite o `.env.local` conforme necessário (URL da API, etc.).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Inicie o servidor de desenvolvimento
 
-## Deploy on Vercel
+```bash
+pnpm dev
+# ou
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# front-nextjs-api-social-meida
+---
+
+## 📜 Scripts disponíveis
+
+| Script       | Descrição                            |
+| ------------ | ------------------------------------ |
+| `pnpm dev`   | Inicia o servidor de desenvolvimento |
+| `pnpm build` | Gera o build de produção             |
+| `pnpm start` | Inicia o servidor de produção        |
+| `pnpm lint`  | Executa o linter (ESLint)            |
+
+---
+
+## 🗂️ Estrutura do projeto
+
+```
+front-nextjs-api-social-meida/
+├── public/             # Arquivos estáticos
+├── src/                # Código-fonte principal
+│   ├── app/            # Rotas e páginas (App Router)
+│   ├── components/     # Componentes reutilizáveis
+│   └── ...
+├── .env.example        # Exemplo de variáveis de ambiente
+├── components.json     # Configuração do shadcn/ui
+├── next.config.ts      # Configuração do Next.js
+├── tailwind.config.*   # Configuração do Tailwind
+└── tsconfig.json       # Configuração do TypeScript
+```
+
+---
+
+## 🌐 Deploy
+
+O jeito mais simples de fazer deploy é pela [Vercel](https://vercel.com/), plataforma criada pelos mesmos desenvolvedores do Next.js:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JoaoFabris/front-nextjs-api-social-meida)
+
+Lembre-se de configurar as variáveis de ambiente na plataforma de deploy.
+
+---
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/minha-feature`)
+3. Commit suas alterações (`git commit -m 'feat: adiciona minha feature'`)
+4. Push para a branch (`git push origin feature/minha-feature`)
+5. Abra um Pull Request
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso privado. Todos os direitos reservados a [JoaoFabris](https://github.com/JoaoFabris).
