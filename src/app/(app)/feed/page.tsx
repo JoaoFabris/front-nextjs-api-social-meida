@@ -8,6 +8,7 @@ import { CreatePost } from '@/components/create-post';
 import { Button } from '@/components/ui/button';
 import { Post } from '@/types';
 import { Header } from '@/components/header';
+import { AiChat } from '@/components/AiChat';
 
 export default function FeedPage() {
   const { user, logout } = useAuth();
@@ -91,6 +92,7 @@ export default function FeedPage() {
           </div>
         )}
       </main>
+      <AiChat /> {/* 👈 adiciona aqui */}
     </div>
   );
 }
