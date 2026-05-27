@@ -41,7 +41,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         try {
             const { data } = await api.get('/api/v1/auth/me');
             setUser(data);
-        } catch {
+        } catch (err) {
+            console.error('Erro ao buscar usuário:', err);
             Cookies.remove('token');
         } finally {
             setIsLoading(false);

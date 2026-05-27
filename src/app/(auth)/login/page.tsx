@@ -26,8 +26,9 @@ export default function LoginPage() {
     try {
       await login(email, password);
       router.push('/feed');
-    } catch {
-      setError('Email ou senha incorretos');
+    } catch (err: any) {
+      const message = err.response?.data?.message;
+      setError(message || 'Email ou senha incorretos');
     } finally {
       setIsLoading(false);
     }
