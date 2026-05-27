@@ -34,7 +34,7 @@ export default function RegisterPage() {
 
     try {
       // cria o usuário
-      await api.post('/api/v1/users', form);
+      await api.post('/api/v1/auth/register', form);
       // loga automaticamente após criar
       await login(form.email, form.password);
       router.push('/feed');
